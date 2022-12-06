@@ -1,0 +1,39 @@
+@startuml
+
+class Partido{
+    + comenzar()
+    + finalizar()
+    + resultado(): Marcador
+}
+
+class Equipo
+
+class Balón
+
+class Arbitro
+
+class Ubicación
+
+class Marcador
+
+class Jugador
+
+class Entrenador
+
+class Titular
+
+class Suplente
+
+Partido --> "2" Equipo : equipos
+Partido --> Balón
+Partido --> "4" Arbitro
+Partido --> Ubicación
+Partido --> Marcador
+
+Equipo --> "11...20" Jugador : jugadores
+Equipo --> "2" Entrenador : entrenadores
+
+Jugador <|-- Suplente
+Jugador <|-- Titular
+
+@enduml
